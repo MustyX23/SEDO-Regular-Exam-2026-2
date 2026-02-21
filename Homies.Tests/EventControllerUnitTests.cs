@@ -61,9 +61,11 @@ namespace Homies.Tests
         [Test]
         public async Task Add_Get_ShouldReturnViewWithEventFormModel()
         {
+            // Act
             var result = await _controller.Add();
 
             var viewResult = result as ViewResult;
+            // Assert
             Assert.IsNotNull(viewResult);
 
             var model = viewResult.Model as EventFormModel;
